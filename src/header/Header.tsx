@@ -3,8 +3,8 @@ import Headline from "./Headline";
 import Navbar from "./Navbar";
 
 export default function Header() {
-  return (<header>
+  return (<>
     <Navbar />
     <Headline />
-  </header>)
+    </>)
 }

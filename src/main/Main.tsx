@@ -8,6 +8,7 @@ import Skills from "../components/skills/Skills";
 export default function Main() {
   const MainContainer = styled.main`
   background-color: #F8F8F8;
+  padding: 1rem;
   `;
 
   return (<MainContainer>

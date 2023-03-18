@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
-import techs from "../common/techs";
-import projects from "./projects";
+import techs from "../components/common/techs";
+import projects from "../components/projects/projects";
 import { Typography } from "@mui/material";
 
 const Img = styled.img`
@@ -10,6 +10,7 @@ width: 100px;
 `
 
 const ProjectTitle = styled.div`
+/* === HEADING STYLE #2 === */
 & h3 {
 text-transform: capitalize;
 }
@@ -69,19 +70,19 @@ export default function Projects() {
   return (<>
     <section>
       <Typography variant="h1">Projects</Typography>
-      {projects.map((project, index) => <React.Fragment key={project.name + index}>
+      {projects.map(project => <React.Fragment key={project.name}>
         <ProjectTitle>
-        <h3>{project.name}
-        <span>{project.brief}</span>
-        </h3>
-        {project.technologyUsed.map(tech => <img key={tech} src={techs[tech].imageUrl} />)}
+          <h3>{project.name}
+            <span>{project.brief}</span>
+          </h3>
+          {project.technologyUsed.map(tech => <img key={tech} src={techs[tech].imageUrl} />)}
         </ProjectTitle>
-        
+
         <a href="">Live Site</a> <b />
         <a href="">Source Code</a>
-        
+
         <p>{project.description}</p>
-      </React.Fragment >)}
+      </React.Fragment>)}
     </section>
     <img></img>
     <img></img>

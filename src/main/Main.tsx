@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
-import Contact from "../components/contact/Contact";
+import Contact from "../pages/contact";
 import Overview from "../components/overview/Overview";
 import Projects from "../components/projects/Projects";
-import Skills from "../components/skills/Skills";
+import Skills from "../components/skills/Skills"; 
 
 export default function Main() {
   const MainContainer = styled.main`
@@ -11,10 +11,10 @@ export default function Main() {
   padding: 1rem;
   `;
 
-  return (<MainContainer>
+  return ( <MainContainer>
     <Overview />
     <Skills />
     <Projects />
     <Contact />
-  </MainContainer>)
+  </MainContainer> )
 }

@@ -2,8 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   #__next {
-    width: 65%;
-    margin: 0 auto;
+   /*  width: 65%;
+    margin: 0 auto; */
     min-height: 100vh;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;

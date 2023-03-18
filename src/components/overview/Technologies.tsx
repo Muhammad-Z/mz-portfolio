@@ -13,10 +13,11 @@ ${props =>
  display: flex;
 flex-direction: row;
 flex-wrap: wrap;
+width: 200px;
 
 & > img {
   cursor: pointer;
- width: 50%;
+ width: 100px;
  height: fit-content;
  flex-shrink: 1;
  /* flex-grow: 1; */

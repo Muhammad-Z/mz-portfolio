@@ -1,5 +1,5 @@
 
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import * as React from "react";
 import styled from "styled-components";
 import techs from "../common/techs";
@@ -10,18 +10,21 @@ export default function Skills() {
       width: 50px;
       height: fit-content;
   `;
-  return (<Grid container spacing={2} alignItems="center" >
-    {techs.map(tech => (<>
-      <Grid item xs={4}>
-        <Img src={tech.imageUrl}></Img>
-        <h3 className="name">{tech.name}</h3>
-      </Grid>
-      <Grid item xs={8}>
-        <CustomizedProgressBars value={tech.skill}></CustomizedProgressBars>
-      </Grid>
-      </>))}
+  return (<>
+    <Typography variant="h1">Skills</Typography>
+    <Grid container spacing={2} alignItems="center" >
+      {techs.map(tech => (<React.Fragment key = {tech.name}>
+        <Grid item xs={4}>
+          <Img src={tech.imageUrl}></Img>
+          <h3 /* className="name" */>{tech.name}</h3>
+        </Grid>
+        <Grid item xs={8}>
+          <CustomizedProgressBars value={tech.skill}></CustomizedProgressBars>
+        </Grid>
+      </React.Fragment>))}
 
-  </Grid>)
+    </Grid>
+  </>)
 }
 
 

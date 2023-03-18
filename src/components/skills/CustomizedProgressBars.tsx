@@ -16,6 +16,7 @@ const indeterminate1Keyframes = keyframes({
 });
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+  width: 300,
   height: 10,
   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {

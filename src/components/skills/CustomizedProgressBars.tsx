@@ -1,8 +1,19 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
+import { keyframes, styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import LinearProgress, { linearProgressClasses } from 
 '@mui/material/LinearProgress';
+
+const indeterminate1Keyframes = keyframes({
+  "0%": {
+    width: "auto",
+    right: "100%"
+  },
+  "100%": {
+    width :"auto",
+   right: "0%"
+  }
+});
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
@@ -15,6 +26,12 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     borderRadius: 5,
     backgroundColor: theme.palette.mode === 'light' ? '#1a90ff' : '#308fe8',
   },
+  "& .MuiLinearProgress-bar": {
+    animation: `${indeterminate1Keyframes} 1.5s linear forwards`
+  },
+ /*  "& .MuiLinearProgress-bar2Indeterminate": {
+    display: "none"
+  } */
 }));
 
 interface Props {

@@ -9,15 +9,16 @@ export default createGlobalStyle`
     border-top-right-radius: 12px;
   }
   
-  main {
+  .layout {
     /* background-color: white;
     border: 3px solid gray; */
     /* margin: 1rem; */
    /*  padding: 1rem; */
     position: relative;
     background: white;
-    padding: 2rem 1rem;
+    padding: 0rem 1rem 1rem 1rem;
     margin: 2rem;
+    
   }
     main:before {
   content: "";
